@@ -1,0 +1,8 @@
+
+
+query showCommodityAllHistorians{ 
+  description: "Select commodity all historians" 
+  statement: 
+    SELECT org.example.basic.PrescriptionTransaction
+  	WHERE (patient == _$patient)
+}

@@ -1,0 +1,23 @@
+
+namespace org.example.basic
+
+asset Patient identified by patientId {
+  o String patientId
+  o String firstName
+  o String lastName
+}
+
+participant Physician identified by physicianId {
+  o String physicianId
+  o String institutionId
+  o String firstName
+  o String lastName
+}
+
+transaction PrescriptionTransaction {
+  --> Patient patient
+  --> Physician physician
+  o String medConceptID
+}
+
+
